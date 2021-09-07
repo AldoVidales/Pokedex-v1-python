@@ -3,14 +3,14 @@ from PIL import  Image,ImageTk
 import  requests
 from io import BytesIO
 import  pokebase as pb
-icono='imagenes/icono.ico'
+
 
 class root:
     def __init__(self):
         self.title="POKEDEX"
         self.size="600x700"
         self.resiable=False
-        self.icon=icono
+        self.icon='icono.ico'
 
 
     def search(self):
@@ -59,7 +59,7 @@ class root:
         
         self.ventana.geometry(self.size)
         self.ventana.resizable(0,0)
-        self.logo="imagenes/logo.png"
+        self.logo="logo.png"
         self.img=ImageTk.PhotoImage(Image.open(self.logo))
         self.banner=Label(self.ventana,image=self.img)
         self.banner.image=self.img
